@@ -1,7 +1,28 @@
+
+### **Exercise 3: Network Isolation and Security with Namespaces**
+
+**Goal:** Create isolated networking environments and secure them using namespaces and Linux tools.
+
+**Requirements:**
+
+1. Use Docker to set up two containers simulating isolated environments (e.g., "Team A" and "Team B").
+2. Use Linux network namespaces to ensure the containers cannot communicate directly.
+3. Create a bridge network that allows selective communication between containers using `iptables`.
+4. Test the setup using tools like `ping` and `curl`.
+5. Write a script to automate the creation of this setup.
+6. 
+ How to go about it
+firstly, you copy the url of this repository and clone it on your terminal
+
+``` 
+git clone https://github.com/chojuninengu/Netowrk_isolation_security_with_name_spaces
+```
+
 # # 🚀 Network Bridge Script Documentation 
 Overview
 This script creates an isolated network environment using Docker containers with a custom bridge configuration, implementing one-way ICMP (ping) communication between two containers.
 Technical Components
+
 # 1. Root Permission Check
 ```sh
 if [ "$EUID" -ne 0 ]; then
